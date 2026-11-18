@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explora Colombia | Descubre algo extraordinario</title>
+  <style>
+    :root {
+      --green: #126b55;
+      --green-dark: #084638;
+      --cream: #f7f6f0;
+      --ink: #17231f;
+      --muted: #66736d;
+      --orange: #f2a65a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+    }
+    header {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 0 8%;
+      background: #fff;
+    }
+    .brand { font-size: 1.25rem; font-weight: 800; color: var(--green-dark); }
+    .brand span { color: var(--orange); }
+    nav { display: flex; gap: 25px; }
+    nav a { color: #43534c; text-decoration: none; font-size: .95rem; }
+    nav a:hover { color: var(--green); }
+    .hero {
+      min-height: 540px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 70px 7%;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(5, 35, 28, .78), rgba(5, 35, 28, .28)),
+        url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+    }
+    .hero-content { max-width: 760px; }
+    .eyebrow {
+      display: inline-block;
+      padding: 9px 15px;
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 30px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: .75rem;
+    }
+    h1 { font-size: clamp(2.7rem, 6vw, 5rem); line-height: 1.03; margin: 22px 0; }
+    .hero p { max-width: 610px; margin: 0 auto 30px; font-size: 1.1rem; line-height: 1.7; color: #f0f4f1; }
+    .button {
+      display: inline-block;
+      padding: 14px 23px;
+      background: var(--orange);
+      color: #2b281f;
+      text-decoration: none;
+      border-radius: 7px;
+      font-weight: 700;
+    }
+    main { max-width: 1120px; margin: auto; padding: 65px 24px 75px; }
+    .intro { text-align: center; max-width: 720px; margin: 0 auto 38px; }
+    .intro h2 { color: var(--green-dark); font-size: 2rem; margin: 0 0 12px; }
+    .intro p { color: var(--muted); line-height: 1.7; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card {
+      overflow: hidden;
+      background: #fff;
+      border-radius: 13px;
+      box-shadow: 0 8px 25px rgba(20, 45, 35, .08);
+    }
+    .card img { width: 100%; height: 190px; object-fit: cover; display: block; }
+    .card-content { padding: 21px; }
+    .card h3 { margin: 0 0 9px; color: var(--green-dark); }
+    .card p { margin: 0; color: var(--muted); line-height: 1.6; font-size: .95rem; }
+    .note {
+      margin-top: 35px;
+      padding: 22px 25px;
+      background: #e7efe9;
+      border-left: 5px solid var(--green);
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+    footer { padding: 25px; text-align: center; color: #dce9e2; background: var(--green-dark); }
+    @media (max-width: 760px) {
+      header { padding: 18px 6%; flex-direction: column; }
+      nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
+      .hero { min-height: 480px; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Explora<span>Colombia.</span></div>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#destinos">Destinos</a>
+      <a href="#nosotros">Nosotros</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <span class="eyebrow">Un país de experiencias</span>
+      <h1>Colombia está llena de lugares por descubrir</h1>
+      <p>Desde paisajes naturales hasta pueblos llenos de historia, descubre destinos que inspiran nuevas aventuras.</p>
+      <a class="button" href="#destinos">Explorar destinos</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="intro" id="destinos">
+      <h2>Un viaje, muchas experiencias</h2>
+      <p>Conoce algunos lugares que representan la diversidad, la cultura y la belleza de Colombia. Cada destino tiene una historia que merece ser vivida.</p>
+    </section>
+
+    <section class="cards" aria-label="Destinos destacados">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=900&q=80" alt="Paisaje de costa tropical">
+        <div class="card-content">
+          <h3>Playas y naturaleza</h3>
+          <p>Relájate junto al mar, explora senderos y disfruta de paisajes tropicales inolvidables.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80" alt="Arquitectura urbana">
+        <div class="card-content">
+          <h3>Ciudades con historia</h3>
+          <p>Descubre calles, arquitectura, gastronomía y expresiones culturales en cada recorrido.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80" alt="Bosque verde y frondoso">
+        <div class="card-content">
+          <h3>Aventura natural</h3>
+          <p>Conéctate con la biodiversidad y contempla escenarios naturales llenos de vida.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="note" id="nosotros">
+      <strong>Sobre Explora Colombia:</strong> esta página es una demostración web sencilla para practicar la construcción de imágenes Docker y la ejecución de contenedores con NGINX.
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Explora Colombia · Proyecto de práctica con Docker
+  </footer>
+</body>
+</html>
